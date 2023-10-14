@@ -153,9 +153,11 @@ function createBlockInfo(){
   blockImg.classList.add('section-1__block-img');
 
   const listItem = document.createElement('li');
+  listItem.classList.add('delivery-item')
   listItem.dataset.item = '1';
 
   const img = document.createElement('img');
+  img.classList.add('delivery-img')
   img.src = 'img/img-2.jpg';
 
   const count = document.createElement('div');
@@ -247,16 +249,19 @@ const elemHidden = () => {
         check.classList.add('listTitle');
         bagDiv.classList.remove('mb-36')
       }else{
-        check.innerHTML = `<label for="selectAll" class="checkbox-label">
+        const checked = Array.from(checkboxes).filter(check => check.checked === true);
+        checked.length === checkboxes.length ? check.innerHTML = `<label for="selectAll" class="checkbox-label">
+        <input type="checkbox" class="checkbox checkbox-input" id="selectAll" checked>Выбрать все
+        <span class="checkbox-span"></span>
+        </label>` : check.innerHTML = `<label for="selectAll" class="checkbox-label">
         <input type="checkbox" class="checkbox checkbox-input" id="selectAll">Выбрать все
         <span class="checkbox-span"></span>
-      </label>`
+        </label>`;
         bagDiv.classList.add('mb-36');
       }
   });
   });
 };
-
 const getFullPrice = () => {
   const checkboxes = firstListCard.querySelectorAll('input');
   let sumPrice = 0
