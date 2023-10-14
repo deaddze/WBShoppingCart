@@ -453,6 +453,7 @@ const isMobile = window.matchMedia('(max-width: 320px)').matches;
 if(isMobile){
   emailInput.setAttribute('placeholder', 'Электронная почта')
 }
+
 removeItem();
 counter();
 checkedAll();

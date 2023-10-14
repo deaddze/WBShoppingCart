@@ -309,9 +309,10 @@ body{
 }
 .section-1__card:last-child{
   margin-bottom: 0;
+  padding-top: 10px;
 }
 .mb-20{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .mb-18{
   margin-bottom: 18px;
@@ -539,6 +540,10 @@ body{
   display: flex;
   justify-content: space-between;
   margin-left: auto;
+  margin-top: 3px;
+}
+.still{
+  margin-bottom: 11px;
 }
 .section-1__price{
   position: relative;
@@ -859,8 +864,6 @@ body{
 .section-1__icons button{
   cursor: pointer;
   border: none;
-  width: 20px;
-  height: 20px;
 }
 .section-1__block-info{
   display: grid;
@@ -985,13 +988,20 @@ body{
   margin-bottom: 8px;
 }
 .like{
+  width: 19.12px;
+  height: 16px;
   background-image: url("icons/like.svg");
+  background-repeat: no-repeat;
 }
 .like:hover{
   background-image: url("icons/fiolet-like.svg")
 }
 .bag{
+  width: 15px;
+  height: 16px;
+  margin-right: 3px;
   background-image: url('icons/bag.svg');
+  background-repeat: no-repeat;
 }
 .bag:hover{
   background-image: url('icons/red-bag.svg')
@@ -1154,6 +1164,9 @@ body{
   width: 40px;
   height: 56px;
 }
+#form-info input{
+  border-radius: 0;
+}
 .backdrop{
   position: fixed;
   top: 0;
@@ -1199,6 +1212,7 @@ body{
   border-radius: 16px;
 }
 .deliveryBtn{
+  color: black;
   width: 224px;
   height:36px;
   border-radius: 20px;
@@ -1304,9 +1318,6 @@ body{
     max-width: 638px;
     padding: 17px 24px 24px 24px;
   }
-  .section-1__block:nth-child(1){
-    padding: 18px 24px 24px 24px;
-  }
   .input-1{
     margin-bottom: 21px;
   }
@@ -1354,6 +1365,11 @@ body{
     justify-content: space-between;
     width: 22.5px;
     height: 18.5px;
+  }
+  .still{
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
   }
   .hamburger{
     height: 2.3px;
@@ -1489,14 +1505,18 @@ body{
     display: none;
   }
   .section-1__icons{
-    width: 64px;
+    width: 65px;
+    height: 20px;
     margin-right: 12px;
   }
   .section-1__block{
     padding: 16px 0px 24px 0px;
   }
   .section-1__block:nth-child(1){
-    padding: 16px 16px 24px 16px;
+    padding: 10px 16px 24px 16px;
+  }
+  .section-1__block:last-child{
+    margin-bottom: 0;
   }
   .section-1__block-title{
     margin-top: 2px;
@@ -1521,7 +1541,7 @@ body{
     margin-bottom: 13px;
   }
   .section-1__card:nth-child(2){
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
   .arrow{
     position: relative;
@@ -1624,10 +1644,13 @@ body{
     justify-content: space-between;
   }
   .section-2{
+    position: relative;
+    bottom: 4px;
+    left: 0px;
     border: none;
     background: none;
     box-shadow: none;
-    padding: 14px 8px 24px 8px;
+    padding: 0px 8px 24px 8px;
   }
   #sum{
     font-size: 20px;
