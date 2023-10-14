@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__section-1">
+        <div class="header__hamburger">
+          <div class="header__ham-box">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </div>
+        </div>
+        <div class="header__title"></div>
+      </div>
+      <form class="header__form"> 
+        <input type="text" name="search" class="header__search" placeholder="Я ищу...">
+        <button type="submit" class="header__btn"><img src="icons/Search.svg"></button>
+      </form>
+      <div class="header__icons">
+        <a class="header__icon">
+          <div class="header__bag">
+            <img src="icons/profile-icon.svg">           
+            <p class="header__icon-text">Профиль</p>
+          </div>
+        </a>
+        <a class="header__icon">
+          <div class="header__bag">
+            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2214 17.4665C11.3829 17.9206 11.8452 18.1949 12.3212 18.119L25.0874 16.0828C25.5004 16.017 25.8288 15.701 25.9106 15.2909L27.2654 8.49865C27.3875 7.88644 26.925 7.31324 26.3008 7.30317L8.94122 7.02324C8.24354 7.01199 7.74913 7.70067 7.98289 8.35812L11.2214 17.4665Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8262 25.3593C13.1109 25.3593 14.1523 24.3178 14.1523 23.0331C14.1523 21.7484 13.1109 20.707 11.8262 20.707C10.5415 20.707 9.5 21.7484 9.5 23.0331C9.5 24.3178 10.5415 25.3593 11.8262 25.3593Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.457 25.3593C24.7417 25.3593 25.7831 24.3178 25.7831 23.0331C25.7831 21.7484 24.7417 20.707 23.457 20.707C22.1723 20.707 21.1308 21.7484 21.1308 23.0331C21.1308 24.3178 22.1723 25.3593 23.457 25.3593Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C6.933 4 8.5 3.77614 8.5 3.5C8.5 3.22386 6.933 3 5 3C3.067 3 1.5 3.22386 1.5 3.5C1.5 3.77614 3.067 4 5 4Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.45442 2.65147C3.1177 2.55672 4.01745 2.5 5 2.5C5.98255 2.5 6.8823 2.55672 7.54558 2.65147C7.87345 2.69831 8.16489 2.75734 8.38495 2.83167C8.4917 2.86772 8.61185 2.91717 8.71511 2.98926C8.80017 3.04864 9 3.21275 9 3.5C9 3.78725 8.80017 3.95136 8.71511 4.01074C8.61185 4.08283 8.4917 4.13228 8.38495 4.16833C8.16489 4.24266 7.87345 4.30169 7.54558 4.34853C6.8823 4.44328 5.98255 4.5 5 4.5C4.01745 4.5 3.1177 4.44328 2.45442 4.34853C2.12655 4.30169 1.83511 4.24266 1.61505 4.16833C1.5083 4.13228 1.38815 4.08283 1.28489 4.01074C1.19983 3.95136 1 3.78725 1 3.5C1 3.21275 1.19983 3.04864 1.28489 2.98926C1.38815 2.91717 1.5083 2.86772 1.61505 2.83167C1.83511 2.75734 2.12655 2.69831 2.45442 2.65147Z" fill="white"/>
+              </svg> 
+            <div class="header__bag-count count">
+              <p id="bagCount">3</p>
+            </div>             
+          </div>
+          <p class="header__icon-text" style="margin-top:-1px;">Корзина</p>
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section-1">
+        <div class="section-1__bag mb-36">
+          <h1 class="section-1__h1">Корзина</h1>
+          <div class="section-1__stock mb-0">
+            <div class="section-1__checkAll">
+              <div class="section-1__check">
+                <label for="selectAll" class="checkbox-label">
+                  <input type="checkbox" class="checkbox checkbox-input" id="selectAll" checked>Выбрать все
+                  <span class="checkbox-span"></span>
+                </label>
+              </div>
+              <img src="icons/icon-20.svg" alt="" class="arrow">
+            </div>
+            <div class="section-1__line"></div>
+            <ul class="section-1__list-card list-card">
+              <li class="section-1__card" data-item="1">
+                <div class="section-1__product">
+                  <label for="product1" class="checkbox-label">
+                    <input type="checkbox" id="product1" class="checkbox-input" checked>
+                    <span class="checkbox-span"></span>
+                      <div class="section-1__img">
+                        <img src="img/photo1.jpg" alt="Изображение товара">
+                        <div class="numBox">56</div>
+                      </div>
+                  </label>
+                  <div class="product-info">
+                    <div class="product-name">
+                      <h3>Футболка UZcotton мужская</h3>
+                      <p>Цвет: белый</p>
+                      <p>Размер: 56</p>
+                    </div>
+                    <h6>Коледино WB</h6>
+                    <div class="section-1__company-info">
+                      <h6>ООО Вайлдберриз</h6>
+                      <img src="icons/info-icon.svg" class="info">
+                      <span class="tooltip-info">
+                        <h6>OOO «МЕГАПРОФСТИЛЬ»</h6>
+                        <p>ОГРН: 5167746237148</p>
+                        <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-1__price-list" data-price="522" data-old-price="1051">
+                  <div class="section-1__quantity">
+                    <div class="section-1__counter">
+                      <button class="minus">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.0996 12.8242H7.91992V11.5156H17.0996V12.8242Z" fill="black" fill-opacity="0.2"/>
+                        </svg>                          
+                      </button>
+                      <span class="countSpan">1</span>
+                      <button class="plus">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.0996 12.8242H13.1543V16.7598H11.8555V12.8242H7.91992V11.5156H11.8555V7.58008H13.1543V11.5156H17.0996V12.8242Z" fill="black"/>
+                          </svg>
+                      </button>
+                    </div>
+                    <p class="section-1__howStill">Осталось <span class="countStill">2</span> шт.</p>
+                    <div class="section-1__icons">
+                      <button class="like">
+                      </button>
+                      <button class="bag">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="section-1__price">
+                    <div class="currentPrice">
+                      <h2 class="price">522</h2><span class="som">сом</span>
+                    </div>
+                    <h5 class="oldPrice"><span>1051 сом</span></h5>
+                    <span class="tooltip-text">
+                      <div class="tooltip-title">
+                        <p>Скидка 55%</p>
+                        <p>Скидка покупателя 10%</p>
+                      </div>
+                      <div class="tooltip-numbers">
+                        <p>-300 coм</p>
+                        <p>-30 coм</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="section-1__card mb-20" data-item="2">
+                <div class="section-1__product">
+                  <label for="product2" class="checkbox-label">
+                    <input type="checkbox" id="product2" class="checkbox-input" checked>
+                    <span class="checkbox-span"></span>
+                    <div class="section-1__img">
+                      <img src="img/photo2.jpg" alt="Изображение товара">
+                    </div>
+                  </label>
+                  <div class="product-info">
+                    <div class="product-name">
+                      <h3>Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h3>
+                      <p>Цвет: прозрачный</p>
+                    </div>
+                    <h6>Коледино WB</h6>
+                    <div class="section-1__company-info">
+                      <h6>ООО Мегапрофстиль</h6>
+                      <img src="icons/info-icon.svg" class="info">
+                      <span class="tooltip-info">
+                        <h6>OOO «МЕГАПРОФСТИЛЬ»</h6>
+                        <p>ОГРН: 5167746237148</p>
+                        <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-1__price-list" data-price="10500.235" data-old-price="11500.235">
+                  <div class="section-1__quantity">
+                    <div class="section-1__counter">
+                      <button class="minus">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.0996 12.8242H7.91992V11.5156H17.0996V12.8242Z" fill="black"/>
+                        </svg>                                                  
+                      </button>
+                      <span class="countSpan">200</span>
+                      <button class="plus">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.0996 12.8242H13.1543V16.7598H11.8555V12.8242H7.91992V11.5156H11.8555V7.58008H13.1543V11.5156H17.0996V12.8242Z" fill="black"/>
+                          </svg>
+                      </button>
+                    </div>
+                    <div class="section-1__icons">
+                      <button class="like">
+                      </button>
+                      <button class="bag">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="section-1__price">
+                    <div class="currentPrice">
+                      <h2 class="price fs-16">2 100 047</h2><span class="som">сом</span>
+                    </div>
+                    <h5 class="oldPrice"><span>2 300 047 сом</span></h5>
+                    <span class="tooltip-text">
+                      <div class="tooltip-title">
+                        <p>Скидка 55%</p>
+                        <p>Скидка покупателя 10%</p>
+                      </div>
+                      <div class="tooltip-numbers">
+                        <p>-300 coм</p>
+                        <p>-30 coм</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="section-1__card" data-item="3">
+                <div class="section-1__product">
+                  <label for="product3" class="checkbox-label">
+                    <input type="checkbox" id="product3" class="checkbox-input" checked>
+                    <span class="checkbox-span"></span>
+                    <div class="section-1__img">
+                      <img src="img/photo3.jpg" alt="Изображение товара">
+                    </div>
+                  </label>
+                  <div class="product-info">
+                    <div class="product-name">
+                      <h3>Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell </h3>
+                    </div>
+                    <h6>Коледино WB</h6>
+                    <div class="section-1__company-info">
+                      <h6>ООО Вайлдберриз</h6>
+                      <img src="icons/info-icon.svg" class="info">
+                      <span class="tooltip-info">
+                        <h6>OOO «МЕГАПРОФСТИЛЬ»</h6>
+                        <p>ОГРН: 5167746237148</p>
+                        <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-1__price-list" data-price="247" data-old-price="475">
+                  <div class="section-1__quantity">
+                    <div class="section-1__counter">
+                      <button class="minus">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.0996 12.8242H7.91992V11.5156H17.0996V12.8242Z" fill="black"/>
+                        </svg>                                                                          
+                      </button>
+                      <span class="countSpan">2</span>
+                      <button class="plus">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.0996 12.8242H13.1543V16.7598H11.8555V12.8242H7.91992V11.5156H11.8555V7.58008H13.1543V11.5156H17.0996V12.8242Z" fill="black" fill-opacity="0.2"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="section-1__howStill">Осталось <span class="countStill">2</span> шт.</p>
+                    <div class="section-1__icons">
+                      <button class="like">
+                      </button>
+                      <button class="bag">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="section-1__price">
+                    <div class="currentPrice">
+                      <h2 class="price">494</h2><span class="som">сом</span>
+                    </div>
+                    <h5 class="oldPrice">
+                      <span>950 сом</span>
+                    </h5>
+                    <span class="tooltip-text">
+                      <div class="tooltip-title">
+                        <p>Скидка 55%</p>
+                        <p>Скидка покупателя 10%</p>
+                      </div>
+                      <div class="tooltip-numbers">
+                        <p>-300 coм</p>
+                        <p>-30 coм</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-1__stock">
+          <div class="section-1__checkAll">
+            <h3 class="listTitle">Отсутствуют · 3 товара</h3>
+            <img src="icons/icon-20.svg" class="arrow">
+          </div>
+          <ul class="section-1__list-card">
+            <div class="section-1__line"></div>
+            <li class="section-1__card ">
+              <div class="section-1__product grey">
+                <div class="section-1__img">
+                  <img src="img/photo1.jpg" alt="Изображение товара">
+                  <div class="numBox">56</div>
+                </div>
+                <div class="product-info absent">
+                  <div class="product-name">
+                    <h3>Футболка UZcotton мужская</h3>
+                    <p>Цвет: белый</p>
+                    <p>Размер: 56</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section-1__icons absent-icons">
+                <button class="like">
+                </button>
+                <button class="bag">
+                </button>
+              </div>
+            </li>
+            <li class="section-1__card mb-18" >
+              <div class="section-1__product grey">
+                <div class="section-1__img">
+                  <img src="img/photo2.jpg" alt="Изображение товара">
+                </div>
+                <div class="product-info absent">
+                  <div class="product-name">
+                    <h3>Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</h3>
+                    <p>Цвет: прозрачный</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section-1__icons absent-icons">
+                <button class="like">
+                </button>
+                <button class="bag">
+                </button>
+              </div>
+            </li>
+            <li class="section-1__card">
+              <div class="section-1__product grey">
+                <div class="section-1__img">
+                  <img src="img/photo3.jpg" alt="Изображение товара">
+                  <div class="numBox">56/54/52...</div>
+                </div>
+                <div class="product-info absent">
+                  <div class="product-name">
+                    <h3>Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="section-1__icons absent-icons">
+                <button class="like">
+                </button>
+                <button class="bag">
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="section-1__blocks">
+          <div class="section-1__block" id="block-1">
+            <div class="section-1__block-title">
+              <h1>Способ доставки</h1>
+              <button class="openPopupDelivery">Изменить</button>
+            </div>
+            <div class="section-1__block-info">
+              <h4>Пункт выдачи</h4>
+              <div class="section-1__block-address">
+                <h5 class="address">Бишкек, улица Ахматбека Суюмбаева, 12/1</h5>
+                <div>
+                  <img src="icons/Stars.svg" style="margin-right: 4px;">
+                  <span>4.99</span>
+                  <span>Ежедневно с 10 до 21 </span>
+                </div>
+              </div>
+            </div>
+            <div class="section-1__block-info mb-16">
+              <h4>Стоимость доставки</h4>
+              <h5>Бесплатно</h5>
+            </div>
+            <ul class="block-info__list">
+              <li class="section-1__block-info mb-12" id="block-info1">
+                <h4 class="dateOfDelivery">5—6 февраля</h4>
+                <ul class="section-1__block-img" id="blockImg">
+                  <li data-item="1">
+                    <img src="img/img-1.jpg">
+                    <div class="section-1__count count hidden">
+                      <p>1</p>
+                    </div>
+                  </li>
+                  <li data-item="2">
+                    <img src="img/img-2.jpg">
+                    <div class="section-1__count count">
+                      <p>184</p>
+                    </div>
+                  </li>
+                  <li data-item="3">
+                    <img src="img/img-3.jpg">
+                    <div class="section-1__count count">
+                      <p>2</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="section-1__block-info mb-19" id="block-info2">
+                <h4 class="dateOfDelivery">7—8 февраля</h4>
+                <ul class="section-1__block-img">
+                  <li data-item="1">
+                    <img src="img/img-2.jpg">
+                    <div class="section-1__count count">
+                      <p class="block-info__count">16</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="section-1__delivery">
+              <img src="icons/price-shipping.svg">
+              <div class="delivery-free">
+                Обратная доставка товаров на склад при отказе — <span class="free-text">бесплатно</span>
+                <span class="tooltip-free tooltip-2">
+                  <p>Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="section-1__block">
+            <div class="section-1__div"> 
+              <div class="section-1__block-title">
+                <h1>Способ оплаты</h1>
+                <button class="openPopupPay">Изменить</button>
+              </div>
+              <div class="section-2__card">
+                <img src="icons/pay-sistem.svg" class="payCardImg">
+                <h4 class="payCardText">1234 56•• •••• 1234</h4>
+                <h4>01/30</h4>
+              </div>
+            </div>
+            <p class="text" style="color: #9797AF">Спишем оплату с карты при получении</p>
+          </div>
+          <div class="section-1__block padding-15">
+            <div class="section-1__block-title">
+              <h1>Получатель</h1>
+            </div>
+            <form id="form-info">
+              <div class="input-1">
+                <div class="form-info__input">
+                  <label for="first-name" class="form-info__label opacity">Имя</label>
+                  <input type="text" id="first-name" class="inputText formInput1" name="first-name" placeholder="Имя" required>
+                  <small class="error-message hiddenError">Укажите имя</small>
+                </div>
+                <div class="form-info__input">
+                  <label for="last-name" class="form-info__label opacity">Фамилия</label>
+                  <input type="text" id="last-name" class="inputText formInput1" name="last-name" placeholder="Фамилия" required>
+                  <small class="error-message hiddenError">Введите фамилию</small>
+                </div>
+              </div>
+              <div class="input-2">
+                <div class="form-info__input">
+                  <label for="email" class="form-info__label opacity">Почта</label>
+                  <input type="email" id="email" name="email" class="inputText w" placeholder="Почта" required>
+                  <small class="error-message hiddenError">Укажите электронную почту</small>
+                </div>
+                <div class="form-info__input">
+                  <label for="phone" class="form-info__label opacity">Телефон</label>
+                  <input type="tel" pattern="\+[0-9]{9}" id="phone" name="phone" maxlength="30" class="inputText w" placeholder="Телефон" required>
+                  <small class="error-message hiddenError">Укажите номер телефона</small>
+                </div>
+                <div class="form-info__input">
+                  <label for="inn" class="form-info__label opacity">ИНН</label>
+                  <input type="text" id="inn" name="inn" class="inputText w" pattern="\d{10}" placeholder="ИНН" title="ИНН должен состоять из 10 цифр" required>
+                  <small class="form-info__span">Для таможенного оформления</small>
+                </div>
+              </div>
+             </form>
+          </div>
+        </div>
+      </section>
+      <section class="section-2">
+        <div class="section-2__price">
+          <div class="section-2__flex mr-8">
+            <h2 class="totalTitle">Итого</h2><h2 id="sum">2 101 063 <span>сом</span></h2>
+          </div>
+          <div class="section-2__flex">
+            <p id="itemCount">203 товара</p> <p id="oldPriceSum">2 302 048 сом</p>
+          </div>
+          <div class="section-2__flex">
+            <p>Скидка</p><p id="discountCount">-200 985 сом</p>
+          </div>
+          <div class="section-2__flex">
+            <p>Доставка</p><p>Бесплатно</p>
+          </div>
+        </div>
+        <div class="section-2__address">
+          <div class="section-2__edit">
+            <div class="section-2__infol">
+              <h3 class="edit-text mr-5">Доставка в пункт выдачи</h3>
+              <button class="openPopupDelivery">
+                <img src="icons/edit-pen.svg">
+              </button>
+              <p style="margin-bottom: 4px;" class="address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p style="color: #CB11AB; margin-bottom: 14px;">5–8 фев</p>
+            </div>
+          </div>
+            <div class="section-2__block block1">
+              <div class="section-1__delivery">
+                <img src="icons/price-shipping.svg">
+              <div class="delivery-free">
+                Обратная доставка товаров на склад при отказе — <span class="free-text">бесплатно</span>
+                <span class="tooltip-free tooltip-1">
+                  <p>Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-2__cartPay">
+          <div class="section-2__pay">
+            <div class="section-2__edit" style="margin-bottom: 4px;">
+              <h3 class="edit-text">Оплата картой</h3>
+              <button class="openPopupPay">
+                <img src="icons/edit-pen.svg">
+              </button>
+            </div>
+            <div class="section-2__card">
+              <img src="icons/pay-sistem.svg" class="payCardImg">
+              <p class="payCardText">1234 12•• •••• 1234</p>
+            </div>
+          </div>
+          <div class="section-2__block">
+            <label class="section-2__label checkbox-label">
+              <input type="checkbox" id="checkboxPay" class="checkbox-input">
+              <span class="section-2__checkbox checkbox-span"></span>
+              <p class="text">Списать оплату сразу</p>
+            </label>
+            <p class="text">Спишем оплату с карты при получении</p>
+          </div>
+        </div>
+        <button class="main-btn" id="orderBtn" type="submit">Заказать</button>
+        <div class="section-2__agree">
+          <img src="icons/agree-icon.svg">
+          <p>Соглашаюсь с <span class="underline">правилами пользования торговой площадкой</span> и <span class="underline">возврата</span></p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__title">
+        <h6>© 2022&nbsp;&nbsp;ООО «Товары и точка»</h6>
+      </div>
+    </footer>
+    <nav class="tabbar">
+      <div class="tabbar__icons">
+        <img src="icons/main.svg">
+      </div>
+      <div class="tabbar__icons">
+        <img src="icons/catalog.svg">
+      </div>
+      <div class="tabbar__icons">
+        <img src="icons/cart.svg">
+      </div>
+      <div class="tabbar__icons">
+        <img src="icons/favorites.svg">
+      </div>
+      <div class="tabbar__icons">
+        <img src="icons/profile.svg">
+      </div>
+    </nav>
+  </div>
+  <div class="backdrop hidden"></div>
+  <div class="popup-pay hidden">
+    <div class="popup-pay__title">
+      <h1>Способ оплаты</h1>
+      <button class="closeBtn">
+        <img src="icons/closeBtn.svg">
+      </button>
+    </div>
+    <ul>
+      <li class="card-pay">
+        <label for="mir-card" class="label-radio">
+          <input type="radio" id="mir-card" name="card" value="1234 56•• •••• 1234" class="input-radio">
+          <span class="custom-radio"></span>
+          <img src="icons/mir-card.svg" class="imgCard">
+          <p class="textCard">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+      <li class="card-pay">
+        <label for="visa-card" class="label-radio">
+          <input type="radio" id="visa-card" name="card" value="1234 56•• •••• 1234" class="input-radio">
+          <span class="custom-radio"></span>
+          <img src="icons/visa-card.svg" class="imgCard">
+          <p class="textCard">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+      <li class="card-pay">
+        <label for="master-card" class="label-radio">
+          <input type="radio" id="master-card" name="card" value="1234 56•• •••• 1234" class="input-radio">
+          <span class="custom-radio"></span>
+          <img src="icons/master-card.svg" class="imgCard">
+          <p class="textCard">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+      <li class="card-pay">
+        <label for="union-card" class="label-radio">
+          <input type="radio" id="union-card" name="card" value="1234 56•• •••• 1234" class="input-radio">
+          <span class="custom-radio"></span>
+          <img src="icons/union-card.svg" class="imgCard">
+          <p class="textCard">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+    </ul>
+    <button class="selectCardBtn" id="selectCardBtn">Выбрать</button>
+  </div>
+  <div class="popupDelivery hidden">
+    <div class="popup-pay__title">
+      <h1>Способ доставки</h1>
+      <button class="closeBtn">
+        <img src="icons/closeBtn.svg">
+      </button>
+    </div>
+    <div class="popupDelivery__btns">
+      <button class="deliveryBtn">В пункт выдачи</button>
+      <button class="deliveryBtn selectedBtn">Курьером</button>
+    </div>
+    <div class="deliveryInfo">
+      <h6>Мои адреса</h6>
+      <ul class="list__card-pay">
+        <li class="card-pay">
+          <label for="address-1" class="label-radio">
+            <input type="radio" id="address-1" name="card" value="Бишкек, улица Табышалиева, 57" class="input-radio">
+            <span class="custom-radio mr-10"></span>
+            <div class="card-pay__text">
+              <p class="address-text pdel">Бишкек, улица Табышалиева, 57</p>
+              <small class="card-pay__small"><img src="icons/Stars.svg">Пункт выдачи</small>
+            </div>
+          </label>
+          <div class="popupBag"></div>
+        </li>
+        <li class="card-pay">
+          <label for="address-2" class="label-radio">
+            <input type="radio" id="address-2" name="card" value="Бишкек, улица Жукеева-Пудовкина, 77/1" class="input-radio">
+            <span class="custom-radio mr-10"></span>
+            <div class="card-pay__text">
+              <p class="address-text pdel">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+              <small class="card-pay__small"><span style="color:black"><img src="icons/Stars.svg">4.99</span>Пункт выдачи</small>
+            </div>
+          </label>
+          <div class="popupBag"></div>
+        </li>
+        <li class="card-pay">
+          <label for="address-3" class="label-radio">
+            <input type="radio" id="address-3" name="card" value="Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1" class="input-radio">
+            <span class="custom-radio mr-10"></span>
+            <div class="card-pay__text">
+              <p class="address-text pdel">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+              <small class="card-pay__small"><span style="color:black"><img src="icons/Stars.svg">4.99</span>Пункт выдачи</small>
+            </div>
+          </label>
+          <div class="popupBag"></div>
+        </li>
+      </ul>
+      <button class="selectCardBtn" id="selectAddressBtn">Выбрать</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
